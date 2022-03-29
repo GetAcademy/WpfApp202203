@@ -13,10 +13,11 @@ namespace WpfApp202203
             var window = new Window();
             var panel = new StackPanel();
 
-            var clicker1 = new ClickerPanel();
-            var clicker2 = new ClickerPanel();
-            panel.Children.Add(clicker1);
-            panel.Children.Add(clicker2);
+            panel.Children.Add(new ClickerPanel());
+            panel.Children.Add(new ClickerPanel());
+            panel.Children.Add(new ClickerPanel());
+            panel.Children.Add(new ClickerPanel());
+            panel.Children.Add(new ClickerPanel());
             //var clicker1 = new Clicker();
             //var clicker2 = new Clicker();
             //panel.Children.Add(clicker1.Panel);
