@@ -6,37 +6,25 @@ namespace WpfApp202203
 {
     internal class Program
     {
-        /*
-         Pause til 11:06
-         */
-
-        private static int _count = 0;
-        private static Label _label;
-
         [STAThread]
         public static void Main(string[] args)
         {
             var application = new Application();
             var window = new Window();
-
-            var button = new Button();
-            button.Content = "Trykk her!";
-            button.Click += ButtonClick;
-
-            _label = new Label();
-
             var panel = new StackPanel();
-            panel.Children.Add(button);
-            panel.Children.Add(_label);
 
+            var clicker1 = new ClickerPanel();
+            var clicker2 = new ClickerPanel();
+            panel.Children.Add(clicker1);
+            panel.Children.Add(clicker2);
+            //var clicker1 = new Clicker();
+            //var clicker2 = new Clicker();
+            //panel.Children.Add(clicker1.Panel);
+            //panel.Children.Add(clicker2.Panel);
+            
             window.Content = panel;
             application.Run(window);
         }
 
-        private static void ButtonClick(object sender, RoutedEventArgs e)
-        {
-            _count++;
-            _label.Content = _count;
-        }
     }
 }
